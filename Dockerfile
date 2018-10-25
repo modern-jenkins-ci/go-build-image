@@ -1,5 +1,8 @@
 FROM golang:1.11-alpine
 
+# go get depends on git being installed
+RUN apk add --update --no-cache git
+
 # Install govendor
 RUN go get github.com/kardianos/govendor
 
